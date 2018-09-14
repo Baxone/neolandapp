@@ -18,14 +18,10 @@ router.get('/fecha/:fecha', (req, res)=>{
 
 		if(rows.length == 0){
 			asistenciaModel.insertarAsistencia(campos, (err, rows) =>{
-
 				if(err) console.log(err)
 				res.json(rows)
-
 			})
 		}
-
-
 	})
 
 })
