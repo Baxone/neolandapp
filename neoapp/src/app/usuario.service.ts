@@ -16,5 +16,9 @@ export class UsuarioService {
         console.log(url)
         return this.http.post(url, formulario).toPromise()
     }
+    getAlumnos(curso){
+        let Url = `${this.baseUrl}/api/alumnos/clase/${curso}`;
+        return this.http.get(Url).toPromise()
+    }
 
 }
