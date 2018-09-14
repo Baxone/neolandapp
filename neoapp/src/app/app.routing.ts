@@ -4,7 +4,7 @@ import { ListadoComponent } from './listado/listado.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { AdministracionComponent } from './administracion/administracion.component'
-
+import { CiudadesComponent } from './ciudades/ciudades.component'
 
 export const appRoutes: Routes = [
     { path: '', component: LoginComponent, pathMatch: 'full' },
@@ -13,6 +13,7 @@ export const appRoutes: Routes = [
     { path: 'listado', component: ListadoComponent},
     { path: 'calendario', component: CalendarioComponent},
     { path: 'administracion', component: AdministracionComponent},
+    { path: 'ciudades', component: CiudadesComponent},
     { path: '**', component: LoginComponent }
 
 ]

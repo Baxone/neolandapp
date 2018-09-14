@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
               this.errorLogin = true
             break;
           case "profe":
-            this.router.navigate(['/cursos'])
+            this.router.navigate(['/ciudades'])
             break;
           case "admin":
             this.router.navigate(['/administracion'])

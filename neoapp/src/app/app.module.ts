@@ -12,6 +12,7 @@ import { ListadoComponent } from './listado/listado.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { ReactiveFormsModule, FormsModule } from '../../node_modules/@angular/forms';
 import { AdministracionComponent } from './administracion/administracion.component';
+import { CiudadesComponent } from './ciudades/ciudades.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AdministracionComponent } from './administracion/administracion.compone
     CursosComponent,
     ListadoComponent,
     CalendarioComponent,
-    AdministracionComponent
+    AdministracionComponent,
+    CiudadesComponent
   ],
   imports: [
     BrowserModule,
