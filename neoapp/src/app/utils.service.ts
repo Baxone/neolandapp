@@ -12,7 +12,7 @@ export class UtilsService {
     }
     getCiudades(ciudad) {
        
-        let url = `${this.baseUrl}/api/ciudad/${ciudad}`;
+        let url = `${this.baseUrl}/api/clases/ciudad/${ciudad}`;
        
         return this.http.get(url).toPromise()
     }

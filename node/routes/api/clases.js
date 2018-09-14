@@ -24,8 +24,9 @@ router.get('/estado/:estado', (req, res)=>{
 
 })
 
-router.get('/ciudad/:ciudad', (req, res)=>{
 
+router.get('/ciudad/:ciudad', (req, res)=>{
+	console.log(req.params)
 	clasesModel.byCiudad(req.params.ciudad, (err, rows)=>{
 
 		if(err) console.log(err)
