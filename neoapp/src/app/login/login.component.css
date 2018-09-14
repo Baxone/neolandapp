@@ -1,0 +1,42 @@
+img{
+    width: 28%;
+    padding:50px;
+   }
+   .registro{
+    text-align: center;
+    padding: 10px;
+    border-radius: 7px;
+    margin: 10px;
+    width: 33%;
+    background-color: #dddddd;
+    border:none;
+    text-decoration: none;
+    font-family: Sans Source pro regular;
+    font-size:18px;
+   }
+   checkbox{
+    font-family: Sans Source pro regular;
+    font-size:14px;
+    border-radius: 3px;
+   }
+   
+   button{
+    text-align: center;
+    padding: 10px;
+    border-radius: 17px;
+    margin: 10px;
+    width: 33%;
+    background-color: #f74848;
+    color:#ffffff;
+    border:none;
+    text-decoration: none;
+    margin-top:50px;
+    font-family: Sans Source pro regular;
+    font-size:24px;
+   }
+   
+   input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color:black !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+   }
