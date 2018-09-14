@@ -6,12 +6,14 @@ exports.connect = (done)=>{
 
 	pool = mysql.createPool({
 		
-		// ----LOCAL-------
-		host: 'localhost',
-		user: 'root',
-		password: 'root',
-		database: 'asistencia',
-		port: 8889
+		
+		// ----HEROKU-------
+		host: 'eu-cdbr-west-02.cleardb.net',
+		user: 'b50793e3966437',
+		password: 'bafd754c',
+		database: 'heroku_edf8765d6cf06d2',
+		port: 3306
+
 
 	})
 	done()
