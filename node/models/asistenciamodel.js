@@ -20,5 +20,4 @@ exports.insertarAsistencia = ({fecha, fk_id_clase, fk_id_alumno}, done) =>{
 		done(null,rows)
 
 	})
-
 }

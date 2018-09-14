@@ -1,10 +1,10 @@
 const db = require('../db')
 
 
-exports.login = ({alias, pass}, done)=>{
+exports.login = ({alias, password}, done)=>{
 
 
-	db.get().query( 'SELECT * FROM usuarios WHERE alias = ? AND pass = SHA1(?)',[alias, pass], (err, rows)=>{
+	db.get().query( 'SELECT * FROM usuarios WHERE alias = ? AND pass = SHA1(?)',[alias, password], (err, rows)=>{
 
 		if(err) console.log(err)
 

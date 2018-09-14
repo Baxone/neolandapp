@@ -3,7 +3,7 @@ import { LoginComponent } from './login/login.component';
 import { ListadoComponent } from './listado/listado.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CalendarioComponent } from './calendario/calendario.component';
-
+import { AdministracionComponent } from './administracion/administracion.component'
 
 
 export const appRoutes: Routes = [
@@ -12,6 +12,7 @@ export const appRoutes: Routes = [
     { path: 'cursos', component: CursosComponent},
     { path: 'listado', component: ListadoComponent},
     { path: 'calendario', component: CalendarioComponent},
+    { path: 'administracion', component: AdministracionComponent},
     { path: '**', component: LoginComponent }
 
 ]
