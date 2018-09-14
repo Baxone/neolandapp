@@ -12,6 +12,8 @@ ciudad: string
   constructor(private activateRoute: ActivatedRoute, private utilsService: UtilsService) {
    
    this.ciudad = this.activateRoute.params.value.ciudad
+
+   
    this.utilsService.getCiudades(this.ciudad).then((res)=>{
      console.log(res.json())
    })
