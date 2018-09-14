@@ -9,7 +9,7 @@ import { CiudadesComponent } from './ciudades/ciudades.component'
 export const appRoutes: Routes = [
     { path: '', component: LoginComponent, pathMatch: 'full' },
     { path: 'login', component: LoginComponent},
-    { path: 'cursos', component: CursosComponent},
+    { path: 'cursos/:ciudad', component: CursosComponent},
     { path: 'listado', component: ListadoComponent},
     { path: 'calendario', component: CalendarioComponent},
     { path: 'administracion', component: AdministracionComponent},
