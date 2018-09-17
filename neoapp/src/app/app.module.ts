@@ -13,6 +13,9 @@ import { CalendarioComponent } from './calendario/calendario.component';
 import { ReactiveFormsModule, FormsModule } from '../../node_modules/@angular/forms';
 import { AdministracionComponent } from './administracion/administracion.component';
 import { CiudadesComponent } from './ciudades/ciudades.component';
+import { AsistenciaComponent } from './asistencia/asistencia.component';
+// import {MatDatepickerModule, MatNativeDateModule, MatDatepickerIntl} from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -22,16 +25,23 @@ import { CiudadesComponent } from './ciudades/ciudades.component';
     ListadoComponent,
     CalendarioComponent,
     AdministracionComponent,
-    CiudadesComponent
+    CiudadesComponent,
+    AsistenciaComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule
+    // MatDatepickerModule,
+    // MatNativeDateModule
+    
+
   ],
-  providers: [],
+  providers: [
+    // {provide: MatDatepickerIntl, useClass: MyIntl},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

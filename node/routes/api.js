@@ -16,8 +16,9 @@ router.use('/asistencia', asistenciaRouter)
 
 // localhost:3000/api/login
 router.post('/login', (req, res)=>{
-	
+	console.log(req.body)
 	userModel.login(req.body, (err, rows)=>{
+
 		if(rows.length == 0){
 			
 			res.json({alias: 'fail'})

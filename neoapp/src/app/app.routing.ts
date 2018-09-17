@@ -5,6 +5,8 @@ import { CursosComponent } from './cursos/cursos.component';
 import { CalendarioComponent } from './calendario/calendario.component';
 import { AdministracionComponent } from './administracion/administracion.component'
 import { CiudadesComponent } from './ciudades/ciudades.component'
+import { AsistenciaComponent } from './asistencia/asistencia.component'
+
 
 export const appRoutes: Routes = [
     { path: '', component: LoginComponent, pathMatch: 'full' },
@@ -14,6 +16,7 @@ export const appRoutes: Routes = [
     { path: 'calendario', component: CalendarioComponent},
     { path: 'administracion', component: AdministracionComponent},
     { path: 'ciudades', component: CiudadesComponent},
+    {path: 'asistencia/:fecha', component: AsistenciaComponent},
     { path: '**', component: LoginComponent }
 
 ]

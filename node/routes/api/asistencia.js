@@ -10,19 +10,62 @@ router.get('/',(req, res)=>{
 })
 
 
-router.get('/fecha/:fecha', (req, res)=>{
-	asistenciaModel.getByFecha(req.params.fecha, (err, rows)=>{
+router.post('/fecha', (req, res)=>{
+	asistenciaModel.getByFecha(req.body.fecha, (err, rows)=>{
 
-		console.log(rows.length)
-		let campos = {fecha: req.params.fecha, fk_id_clase: 1, fk_id_alumno: 2}
+		if(err) console.log(err)
+		res.json(rows)
 
-		if(rows.length == 0){
-			asistenciaModel.insertarAsistencia(campos, (err, rows) =>{
-				if(err) console.log(err)
-				res.json(rows)
-			})
-		}
+
+		// --------Verificar si existe el dia y si no crearlo----
+		// if(rows.length == 0){
+		// 	asistenciaModel.insertarAsistencia(campos, (err, rows) =>{
+		// 		if(err) console.log(err)
+		// 			res.json(rows)
+		// 	})
+		// }
 	})
+
+})
+
+router.post('/faltas', (req, res)=>{
+	let faltas = req.body.faltas
+	let fecha = new Date().toISOString().split('T', 1)
+	fecha = fecha[0]
+	let i = 0
+
+	faltas.forEach((item)=>{
+		asistenciaModel.insertarAsistencia({fecha: fecha, alumno: req.body.alumnos[i], estadoFalta: faltas[i]}, (err, rows)=>{
+
+			if(err) console.log(err)
+
+		})
+		i++
+
+	})
+	res.json({correcto: 'correcto'})
+
+
+
+})
+
+router.post('/actualizar', (req, res)=>{
+	let faltas = req.body.faltas
+	let alumnos = req.body.alumnos
+	let fecha = req.body.fecha
+	let i = 0
+	faltas.forEach((item)=>{
+
+		asistenciaModel.actualizarAsistencia({estadoFalta: faltas[i], alumno: alumnos[i], fecha: fecha}, (err, rows)=>{
+
+			if(err) console.log(err)
+
+
+		})
+		i++
+	})
+	res.json({correcto: 'correcto'})
+
 
 })
 
