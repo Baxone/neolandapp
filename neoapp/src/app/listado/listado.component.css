@@ -1,5 +1,4 @@
 .Rectangle {
-<<<<<<< HEAD
  width: 375px;
  height: 90px;
  background-color: #444444;
@@ -167,13 +166,6 @@ width: 105px;
  float: right;
 
 }
-=======
-    width: 375px;
-    height: 90px;
-    background-color: #444444;
-    text-align: center;
-    padding-top: 21px;
-   }
    .texto{
     text-align: left;
     color: #ffffff
@@ -302,4 +294,3 @@ width: 105px;
     color: #ffffff;
    }
    /* fin del boton */
->>>>>>> 285840c5dae7b390332fc58bd0e6514b85f717be
