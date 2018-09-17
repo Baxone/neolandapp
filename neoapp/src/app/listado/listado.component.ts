@@ -19,10 +19,18 @@ parametros: any
 constructor(private ususarioService: UsuarioService, private activatedRoute: ActivatedRoute) {
 =======
 	curso: string
-
+  parametros: any
   constructor(private ususarioService: UsuarioService, private activatedRoute: ActivatedRoute) {
   
-  	this.curso= this.activatedRoute.params.value.curso
+    this.parametros = this.activatedRoute.params.subscribe(params =>{
+
+      this.curso = params.curso
+
+
+    })
+
+
+
     this.ususarioService.getAlumnos(this.curso).then((res)=>{
 
     	console.log(res.json())

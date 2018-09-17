@@ -9,6 +9,10 @@ import { UtilsService } from '../utils.service';
 })
 export class CursosComponent implements OnInit {
 <<<<<<< HEAD
+ciudad: any
+parametros: any
+=======
+<<<<<<< HEAD
   ciudad: any
   parametros: any
    constructor(private activateRoute: ActivatedRoute, private utilsService: UtilsService) {
@@ -31,9 +35,15 @@ export class CursosComponent implements OnInit {
    ngOnInit() {
 =======
 ciudad: string
+>>>>>>> 6d6691e650beead16c5dc45ce9c98fec9eabc9ce
   constructor(private activateRoute: ActivatedRoute, private utilsService: UtilsService) {
    
-   this.ciudad = this.activateRoute.params.value.ciudad
+
+    this.parametros = this.activateRoute.params.subscribe(params =>{
+
+      this.ciudad = params.ciudad
+
+    })
 
    
    this.utilsService.getCiudades(this.ciudad).then((res)=>{
