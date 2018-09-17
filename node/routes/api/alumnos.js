@@ -9,10 +9,10 @@ router.get('/', function(req, res, next) {
 	res.json(req.body)
 });
 
-router.get('/byClase',(req, res) =>{
+router.get('/clase/:curso',(req, res) =>{
 
 	// cambiar clase por la recibida en el req.body
-	let idClase = 1
+	let idClase = req.params.curso
 	alumnosModel.getAlumnosByClase( idClase, (err, rows )=>{
 
 		if(err) console.log(err)

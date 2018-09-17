@@ -10,7 +10,7 @@ export const appRoutes: Routes = [
     { path: '', component: LoginComponent, pathMatch: 'full' },
     { path: 'login', component: LoginComponent},
     { path: 'cursos/:ciudad', component: CursosComponent},
-    { path: 'listado', component: ListadoComponent},
+    { path: 'listado/:curso', component: ListadoComponent},
     { path: 'calendario', component: CalendarioComponent},
     { path: 'administracion', component: AdministracionComponent},
     { path: 'ciudades', component: CiudadesComponent},
