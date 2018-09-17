@@ -8,10 +8,16 @@ import { UtilsService } from '../utils.service';
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent implements OnInit {
-ciudad: string
+ciudad: any
+parametros: any
   constructor(private activateRoute: ActivatedRoute, private utilsService: UtilsService) {
    
-   this.ciudad = this.activateRoute.params.value.ciudad
+
+    this.parametros = this.activateRoute.params.subscribe(params =>{
+
+      this.ciudad = params.ciudad
+
+    })
 
    
    this.utilsService.getCiudades(this.ciudad).then((res)=>{
